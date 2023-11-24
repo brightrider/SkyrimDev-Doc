@@ -1,4 +1,22 @@
 // ----------------------------------------------------------------------------------------------------
+// KnockExplosion()
+// ----------------------------------------------------------------------------------------------------
+/*
+    Throws an actor.
+
+    Here in positive Y direction. Play with x,y,z,magnitude parameters to achieve desired effect.
+*/
+
+RE::Actor* actor = ...;
+if (RE::AIProcess* aiProcess = actor->GetActorRuntimeData().currentProcess; aiProcess) {
+    RE::NiPoint3 actorPos = actor->GetPosition();
+    actorPos.y += 100;
+    float magnitude = 5;
+    aiProcess->KnockExplosion(actor, actorPos, magnitude);
+}
+// ----------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------
 // PlayIdle()
 // ----------------------------------------------------------------------------------------------------
 // TODO: Third argument.
