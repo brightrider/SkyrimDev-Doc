@@ -24,3 +24,12 @@ if (actor->GetEditorLocation2(pos, rot, worldOrCell, nullptr)) {
     //     * actor EDITOR cell (base cell from Creation Kit) if actor is placed in the interior.
 }
 // ----------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------
+// HasKeywordHelper()
+// ----------------------------------------------------------------------------------------------------
+RE::Actor* actor = ...;
+if (RE::BGSKeyword* keyword = RE::TESForm::LookupByID<RE::BGSKeyword>(0x000F5D16); keyword) {
+    bool hasKeyword = actor->HasKeywordHelper(keyword);
+}
+// ----------------------------------------------------------------------------------------------------
